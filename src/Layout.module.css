@@ -1,0 +1,96 @@
+/* Layout.module.css */
+
+.appContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f3f4f6; /* bg-gray-100 */
+  }
+  
+  .header {
+    background-color: #1f2937; /* bg-gray-800 */
+    color: #fff; /* text-white */
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); /* shadow-md */
+    position: sticky; /* sticky */
+    top: 0; /* top-0 */
+    z-index: 30; /* z-30 */
+  }
+  
+  .navbar {
+    max-width: 1280px; /* container mx-auto */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* px-4 */
+    padding-right: 1rem; /* px-4 */
+  }
+  
+  /* Responsive padding */
+  @media (min-width: 640px) { /* sm */
+    .navbar {
+      padding-left: 1.5rem; /* sm:px-6 */
+      padding-right: 1.5rem; /* sm:px-6 */
+    }
+  }
+  
+  @media (min-width: 1024px) { /* lg */
+    .navbar {
+      padding-left: 2rem; /* lg:px-8 */
+      padding-right: 2rem; /* lg:px-8 */
+    }
+  }
+  
+  .navbarContent {
+    display: flex; /* flex */
+    align-items: center; /* items-center */
+    justify-content: space-between; /* justify-between */
+    height: 4rem; /* h-16 */
+  }
+  
+  .siteTitle {
+    flex-shrink: 0; /* flex-shrink-0 */
+  }
+  
+  .siteTitleLink {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 700; /* font-bold */
+    color: #fff; /* text-white */
+    text-decoration: none; /* no-underline */
+    transition: color 0.15s ease-in-out; /* transition duration-150 ease-in-out */
+  }
+  
+  .siteTitleLink:hover {
+    color: #d1d5db; /* hover:text-gray-300 */
+  }
+  
+  .authControls {
+    display: flex; /* flex */
+    align-items: center; /* items-center */
+    gap: 1rem; /* space-x-4 */
+  }
+  
+  .welcomeMessage {
+    font-size: 0.875rem; /* text-sm */
+    color: #d1d5db; /* text-gray-300 */
+    display: none; /* hidden */
+  }
+  
+  @media (min-width: 640px) { /* sm */
+    .welcomeMessage {
+      display: inline; /* sm:inline */
+    }
+  }
+  
+  
+  .mainContent {
+    flex-grow: 1; /* flex-grow */
+  }
+  
+  .footer {
+    background-color: #374151; /* bg-gray-700 */
+    text-align: center; /* text-center */
+    font-size: 0.75rem; /* text-xs */
+    color: #d1d5db; /* text-gray-300 */
+    padding: 0.75rem; /* p-3 */
+    margin-top: auto; /* mt-auto */
+  }
+  

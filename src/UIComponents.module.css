@@ -1,0 +1,215 @@
+/* UIComponents.module.css */
+
+/* --- Loading Spinner --- */
+.loadingSpinnerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loadingSpinnerFullPage {
+    position: fixed;
+    inset: 0; /* top, right, bottom, left: 0; */
+    background-color: rgba(243, 244, 246, 0.75); /* bg-gray-100 bg-opacity-75 */
+    z-index: 50; /* z-50 */
+  }
+  
+  .loadingSpinner {
+    width: 3rem; /* w-12 */
+    height: 3rem; /* h-12 */
+    border: 2px solid transparent; /* border-t-2 border-b-2 */
+    border-top-color: #3b82f6; /* border-blue-500 */
+    border-bottom-color: #3b82f6; /* border-blue-500 */
+    border-radius: 50%; /* rounded-full */
+    animation: spin 1s linear infinite; /* animate-spin */
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* --- Buttons --- */
+  .button {
+    padding: 0.5rem 1rem; /* px-4 py-2 */
+    border-radius: 0.375rem; /* rounded-md */
+    font-weight: 500; /* font-medium */
+    outline: none; /* focus:outline-none */
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, color 0.15s ease-in-out, opacity 0.15s ease-in-out; /* transition duration-150 ease-in-out */
+    cursor: pointer;
+    border: 1px solid transparent; /* Default border */
+  }
+  
+  /* Focus ring styles (simulated) */
+  .button:focus {
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* focus:ring-2 focus:ring-blue-500 */
+    /* focus:ring-offset-2 is harder to simulate without a wrapper div */
+  }
+  
+  .button:disabled {
+    opacity: 0.5; /* disabled:opacity-50 */
+    cursor: not-allowed; /* disabled:cursor-not-allowed */
+  }
+  
+  .buttonPrimary {
+    background-color: #2563eb; /* bg-blue-600 */
+    color: #fff; /* text-white */
+  }
+  
+  .buttonPrimary:not(:disabled):hover {
+    background-color: #1d4ed8; /* hover:bg-blue-700 */
+  }
+  
+  .buttonSecondary {
+    background-color: #e5e7eb; /* bg-gray-200 */
+    color: #1f2937; /* text-gray-800 */
+  }
+  
+  .buttonSecondary:not(:disabled):hover {
+    background-color: #d1d5db; /* hover:bg-gray-300 */
+  }
+  
+  .buttonDanger {
+    background-color: #dc2626; /* bg-red-600 */
+    color: #fff; /* text-white */
+  }
+  
+  .buttonDanger:not(:disabled):hover {
+    background-color: #b91c1c; /* hover:bg-red-700 */
+  }
+  
+  .buttonSuccess {
+    background-color: #16a34a; /* bg-green-600 */
+    color: #fff; /* text-white */
+  }
+  
+  .buttonSuccess:not(:disabled):hover {
+    background-color: #15803d; /* hover:bg-green-700 */
+  }
+  
+  .buttonOutline {
+    background-color: #fff; /* bg-white */
+    color: #2563eb; /* text-blue-600 */
+    border-color: #2563eb; /* border border-blue-600 */
+  }
+  
+  .buttonOutline:not(:disabled):hover {
+    background-color: #eff6ff; /* hover:bg-blue-50 */
+  }
+  
+  .buttonSmall {
+    font-size: 0.875rem; /* text-sm */
+    padding: 0.25rem 0.5rem; /* px-2 py-1 */
+  }
+  
+  .buttonFullWidth {
+      width: 100%; /* w-full */
+  }
+  
+  
+  /* --- Form Components (Input, Select, Textarea) --- */
+  .inputGroup,
+  .selectGroup,
+  .textareaGroup {
+    margin-bottom: 1rem; /* mb-4 */
+  }
+  
+  .inputGroupNoMargin,
+  .selectGroupNoMargin,
+  .textareaGroupNoMargin {
+      margin-bottom: 0; /* Remove margin bottom */
+  }
+  
+  .inputLabel,
+  .selectLabel,
+  .textareaLabel {
+    display: block; /* block */
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500; /* font-medium */
+    color: #374151; /* text-gray-700 */
+    margin-bottom: 0.25rem; /* mb-1 */
+  }
+  
+  .requiredIndicator {
+    color: #ef4444; /* text-red-500 */
+  }
+  
+  .inputField,
+  .selectField,
+  .textareaField {
+    display: block; /* block */
+    width: 100%; /* w-full */
+    padding: 0.5rem 0.75rem; /* px-3 py-2 */
+    margin-top: 0.25rem; /* mt-1 */
+    border: 1px solid #d1d5db; /* border border-gray-300 */
+    border-radius: 0.375rem; /* rounded-md */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+    outline: none; /* focus:outline-none */
+    font-size: 0.875rem; /* sm:text-sm */
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .inputField:focus,
+  .selectField:focus,
+  .textareaField:focus {
+    border-color: #3b82f6; /* focus:border-blue-500 */
+    box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.5), 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* focus:ring-blue-500 focus:border-blue-500 */
+  }
+  
+  .inputError,
+  .selectError,
+  .textareaError {
+    border-color: #ef4444; /* border-red-500 */
+  }
+  
+  .inputError:focus,
+  .selectError:focus,
+  .textareaError:focus {
+      border-color: #ef4444;
+      box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.5), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
+  
+  
+  .selectField {
+      background-color: #fff; /* bg-white */
+      /* Custom arrow styling if needed */
+      appearance: none; /* Remove default arrow */
+      background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 width%3D%2220%22 height%3D%2220%22 fill%3D%22%236B7280%22 viewBox%3D%220 0 20 20%22%3E%3Cpath d%3D%22M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z%22 clip-rule%3D%22evenodd%22 fill-rule%3D%22evenodd%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E');
+      background-repeat: no-repeat;
+      background-position: right 0.5rem center;
+      background-size: 1.5em 1.5em;
+      padding-right: 2.5rem; /* Make space for the arrow */
+  }
+  
+  .selectDisabled {
+      background-color: #e5e7eb; /* bg-gray-100 */
+      cursor: not-allowed; /* cursor-not-allowed */
+  }
+  
+  
+  .errorMessage {
+    margin-top: 0.25rem; /* mt-1 */
+    font-size: 0.75rem; /* text-xs */
+    color: #dc2626; /* text-red-600 */
+  }
+  
+  .errorMessageBox {
+    background-color: #fee2e2; /* bg-red-100 */
+    border: 1px solid #f87171; /* border border-red-400 */
+    color: #b91c1c; /* text-red-700 */
+    padding: 0.75rem 1rem; /* px-4 py-3 */
+    border-radius: 0.25rem; /* rounded */
+    position: relative; /* relative */
+    margin-bottom: 1rem; /* mb-4 */
+  }
+  
+  .errorMessageText {
+    display: block; /* block */
+  }
+  
+  @media (min-width: 640px) { /* sm */
+    .errorMessageText {
+      display: inline; /* sm:inline */
+    }
+  }
+  

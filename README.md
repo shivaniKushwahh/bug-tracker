@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+FealtyX Bug Tracker Demo
+This is a simple demo of a bug tracking application built with React. It features user authentication (mock), task management with different roles (Developer, Manager), time logging, and a basic dashboard with a task trend chart.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The application uses React Router for navigation, Recharts for charting, and date-fns for date manipulation. Styling is handled using standard CSS and CSS Modules, without external libraries like Tailwind CSS.
 
-## Available Scripts
+Features
+Mock User Authentication (Developer and Manager roles)
 
-In the project directory, you can run:
+Task Creation, Viewing, Editing, and Deletion (role-based permissions)
 
-### `npm start`
+Task Filtering and Sorting on the Dashboard
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Time Logging for Tasks
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Task Status Transitions (Open, In Progress, Pending Approval, Closed, Reopened)
 
-### `npm test`
+Task History Tracking
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Dashboard with Active Task Trend Chart
 
-### `npm run build`
+Responsive Layout (using standard CSS media queries)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Technologies Used
+React
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+React Router (using HashRouter)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Recharts
 
-### `npm run eject`
+date-fns
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+CSS Modules
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Standard CSS
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Setup and Installation
+Clone the repository:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+git clone <your-github-repo-url>
+cd <your-repo-name>
 
-## Learn More
+(Replace <your-github-repo-url> and <your-repo-name> with your actual repository details)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Install dependencies:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+npm install
+# or
+yarn install
 
-### Code Splitting
+Ensure CSS files are in place:
+Make sure you have the following CSS files in your src directory alongside App.js:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+global.css
 
-### Analyzing the Bundle Size
+Layout.module.css
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+UIComponents.module.css
 
-### Making a Progressive Web App
+Pages.module.css
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+TaskComponents.module.css
+(These files were provided in the previous steps of our conversation).
 
-### Advanced Configuration
+Running Locally
+To start the development server, run:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+npm start
+# or
+yarn start
 
-### Deployment
+The application should open in your browser at http://localhost:3000 (or another available port).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Demo Credentials
+The application uses mock authentication. You can log in with the following credentials:
 
-### `npm run build` fails to minify
+Developer:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Username: developer
+
+Password: password
+
+Manager:
+
+Username: manager
+
+Password: password
+
+Note: These are hardcoded for demonstration purposes only. Never use plain text passwords or mock authentication like this in a production application.

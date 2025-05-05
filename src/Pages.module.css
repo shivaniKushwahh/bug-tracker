@@ -1,0 +1,179 @@
+/* Pages.module.css */
+
+/* --- General Page Layout --- */
+.pageContainer {
+    max-width: 1280px; /* container mx-auto */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5rem 1rem; /* px-4 sm:px-6 lg:px-8 py-6 */
+  }
+  
+  @media (min-width: 640px) { /* sm */
+    .pageContainer {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) { /* lg */
+    .pageContainer {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
+  
+  /* --- Login Page --- */
+  .loginPageContainer {
+    min-height: calc(100vh - 4rem - 1.75rem); /* Adjusted min-height based on header/footer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f4f6; /* bg-gray-100 */
+    padding: 3rem 1rem; /* py-12 px-4 */
+  }
+  
+  @media (min-width: 640px) { /* sm */
+    .loginPageContainer {
+      padding-left: 1.5rem; /* sm:px-6 */
+      padding-right: 1.5rem; /* sm:px-6 */
+    }
+  }
+  
+  @media (min-width: 1024px) { /* lg */
+    .loginPageContainer {
+      padding-left: 2rem; /* lg:px-8 */
+      padding-right: 2rem; /* lg:px-8 */
+    }
+  }
+  
+  
+  .loginFormCard {
+    max-width: 28rem; /* max-w-md */
+    width: 100%; /* w-full */
+    padding: 2rem; /* p-8 */
+    background-color: #fff; /* bg-white */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+    margin-top: 2rem; /* space-y-8 (top margin) */
+    margin-bottom: 2rem; /* space-y-8 (bottom margin) */
+  }
+  
+  .loginFormCard > div:first-child {
+      margin-bottom: 2rem; /* space-y-8 */
+  }
+  
+  .loginTitle {
+    margin-top: 1.5rem; /* mt-6 */
+    text-align: center; /* text-center */
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 800; /* font-extrabold */
+    color: #111827; /* text-gray-900 */
+  }
+  
+  .loginForm {
+    margin-top: 2rem; /* mt-8 */
+    /* space-y-6 is applied by margin-bottom on children */
+  }
+  
+  .loginForm > div {
+      margin-bottom: 1.5rem; /* space-y-6 */
+  }
+  
+  .loginForm > div:last-child {
+      margin-bottom: 0;
+  }
+  
+  
+  .loginHint {
+    text-align: center; /* text-center */
+    font-size: 0.875rem; /* text-sm */
+    color: #4b5563; /* text-gray-600 */
+    padding-top: 0.5rem; /* pt-2 */
+  }
+  
+  
+  /* --- Dashboard Page --- */
+  .dashboardContainer {
+    max-width: 1280px; /* container mx-auto */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5rem 1rem; /* px-4 sm:px-6 lg:px-8 py-6 */
+  }
+  
+  @media (min-width: 640px) { /* sm */
+    .dashboardContainer {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) { /* lg */
+    .dashboardContainer {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
+  .dashboardHeader {
+    display: flex;
+    flex-wrap: wrap; /* flex-wrap */
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem; /* mb-6 */
+    gap: 1rem; /* gap-4 */
+  }
+  
+  .dashboardTitle {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 600; /* font-semibold */
+    color: #1f2937; /* text-gray-800 */
+  }
+  
+  .dashboardSection {
+    margin-bottom: 2rem; /* mb-8 */
+  }
+  
+  .dashboardSectionTitle {
+      font-size: 1.25rem; /* text-xl */
+      font-weight: 500; /* font-medium */
+      color: #374151; /* text-gray-700 */
+      margin-top: 1rem; /* my-4 */
+      margin-bottom: 1rem;
+  }
+  
+  
+  /* --- Not Found Page --- */
+  .notFoundContainer {
+    text-align: center; /* text-center */
+    padding-top: 2.5rem; /* py-10 */
+    padding-bottom: 2.5rem;
+    padding-left: 1rem; /* px-4 */
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 4rem - 1.75rem - 2.5rem); /* Adjusted min-height */
+  }
+  
+  .notFoundTitle {
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: 700; /* font-bold */
+    color: #1f2937; /* text-gray-800 */
+    margin-bottom: 0.75rem; /* mb-3 */
+  }
+  
+  .notFoundSubtitle {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 600; /* font-semibold */
+    color: #374151; /* text-gray-700 */
+    margin-bottom: 1rem; /* mb-4 */
+  }
+  
+  .notFoundText {
+    color: #4b5563; /* text-gray-600 */
+    margin-bottom: 1.5rem; /* mb-6 */
+    max-width: 28rem; /* max-w-md */
+  }
+  
