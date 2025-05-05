@@ -39,13 +39,13 @@ Clone the repository:
 git clone <your-github-repo-url>
 cd <your-repo-name>
 
+
 (Replace <your-github-repo-url> and <your-repo-name> with your actual repository details)
 
 Install dependencies:
 
 npm install
-# or
-yarn install
+
 
 Ensure CSS files are in place:
 Make sure you have the following CSS files in your src directory alongside App.js:
@@ -65,8 +65,7 @@ Running Locally
 To start the development server, run:
 
 npm start
-# or
-yarn start
+
 
 The application should open in your browser at http://localhost:3000 (or another available port).
 
@@ -86,3 +85,19 @@ Username: manager
 Password: password
 
 Note: These are hardcoded for demonstration purposes only. Never use plain text passwords or mock authentication like this in a production application.
+
+Project Structure
+.
+├── public/
+├── src/
+│   ├── App.js
+│   ├── global.css         # Global styles
+│   ├── Layout.module.css  # Styles for Header, Footer, App container
+│   ├── UIComponents.module.css # Styles for Button, Input, Spinner etc.
+│   ├── Pages.module.css   # Styles for specific pages (Login, Dashboard, NotFound)
+│   ├── TaskComponents.module.css # Styles for Task related components (TaskItem, TaskForm etc.)
+│   ├── index.js
+│   └── ... other files
+├── package.json
+├── README.md
+└── ... other files
